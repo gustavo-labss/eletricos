@@ -17,7 +17,7 @@ export const faq = [
   },
   {
     q: 'Vocês buscam o equipamento na minha casa?',
-    a: 'Sim. Temos busca e entrega na região e, em reparos simples, conseguimos atender no seu endereço. Combine pelo WhatsApp que passamos a disponibilidade e a taxa da sua região.',
+    a: 'Sim. Temos busca e entrega em toda Cuiabá e Várzea Grande e, em reparos simples, conseguimos atender no seu endereço. Combine pelo WhatsApp que passamos a disponibilidade e a taxa da sua região.',
   },
   {
     q: 'Dá para recuperar uma bateria que não segura carga?',

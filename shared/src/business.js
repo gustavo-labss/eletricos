@@ -37,20 +37,37 @@ export const business = {
     city: 'Cuiabá',
     state: 'MT',
     region: 'Cuiabá e Várzea Grande',
+    /** Frase da secao de atendimento. */
+    coverageLabel: 'Atendemos toda Cuiabá e Várzea Grande, incluindo:',
     /** Deixe vazio enquanto o atendimento for a domicilio / sem loja fisica. */
     street: '',
     neighborhood: '',
     zip: '',
-    /** Bairros com busca e entrega. Edite a vontade. */
+    /** Cidades atendidas por inteiro (vira o areaServed do JSON-LD). */
+    cities: ['Cuiabá', 'Várzea Grande'],
+    /** Bairros mais populosos e centrais, so como exemplo: o atendimento cobre as duas cidades inteiras. */
     coverage: [
-      'Centro',
-      'Coxipó',
-      'Jardim Itália',
-      'Santa Rosa',
-      'Goiabeiras',
-      'Morada da Serra (CPA)',
-      'Boa Esperança',
-      'Várzea Grande',
+      {
+        city: 'Cuiabá',
+        neighborhoods: [
+          'Centro',
+          'CPA / Morada da Serra',
+          'Coxipó',
+          'Pedra 90',
+          'Tijucal',
+          'Morada do Ouro',
+          'Jardim Itália',
+          'Santa Rosa',
+          'Goiabeiras',
+          'Boa Esperança',
+          'Porto',
+          'Planalto',
+        ],
+      },
+      {
+        city: 'Várzea Grande',
+        neighborhoods: ['Centro', 'Cristo Rei', 'Jardim Glória', 'Parque do Lago'],
+      },
     ],
   },
 

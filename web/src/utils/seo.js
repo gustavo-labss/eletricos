@@ -31,7 +31,11 @@ export function applyStructuredData() {
       telephone: whatsapp.tel,
       image: `${business.siteUrl}/img/og-cover.jpg`,
       priceRange: '$$',
-      areaServed: location.coverage.map((name) => ({ '@type': 'Place', name })),
+      areaServed: location.cities.map((name) => ({
+        '@type': 'City',
+        name,
+        containedInPlace: { '@type': 'State', name: 'Mato Grosso' },
+      })),
       address: {
         '@type': 'PostalAddress',
         addressLocality: location.city,
