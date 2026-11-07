@@ -7,7 +7,7 @@ Arquivos que valem a pena adicionar:
 
 | Arquivo | Uso | Tamanho sugerido |
 | --- | --- | --- |
-| `og-cover.jpg` | Miniatura ao compartilhar o link no WhatsApp/Instagram | 1200×630 |
+| `og-cover.jpg` ✅ já existe | Miniatura ao compartilhar o link no WhatsApp/Instagram (usada em `og:image`, `twitter:image` e no JSON-LD) | 1200×630 |
 | `apple-touch-icon.png` | Ícone ao salvar o site na tela inicial do celular | 180×180 |
 | `oficina-1.jpg` … | Fotos de bancada, antes/depois, equipe | 1200px de largura |
 
