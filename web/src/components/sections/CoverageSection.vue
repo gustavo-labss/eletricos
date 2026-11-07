@@ -23,12 +23,17 @@ const { url, open } = useWhatsapp('Queria saber se vocês atendem meu bairro.')
           resolvidos no seu endereço.
         </p>
 
-        <ul class="coverage__list" aria-label="Bairros atendidos">
-          <li v-for="area in business.location.coverage" :key="area">{{ area }}</li>
-        </ul>
+        <p class="coverage__label">{{ business.location.coverageLabel }}</p>
+
+        <div v-for="group in business.location.coverage" :key="group.city" class="coverage__city">
+          <h3>{{ group.city }}</h3>
+          <ul class="coverage__list" :aria-label="`Bairros atendidos em ${group.city}`">
+            <li v-for="area in group.neighborhoods" :key="area">{{ area }}</li>
+          </ul>
+        </div>
 
         <p class="coverage__note">
-          Seu bairro não está na lista? Quase sempre dá para atender — é só perguntar.
+          Seu bairro não apareceu? Atendemos as duas cidades inteiras — é só chamar.
         </p>
 
         <BaseButton variant="whats" :href="url" @click="open('atendimento')">
@@ -74,11 +79,21 @@ const { url, open } = useWhatsapp('Queria saber se vocês atendem meu bairro.')
   margin-block: var(--space-3) var(--space-3);
 }
 
+.coverage__label {
+  margin-top: var(--space-5);
+  font-weight: 700;
+}
+
+.coverage__city h3 {
+  margin-top: var(--space-4);
+  font-size: 1rem;
+}
+
 .coverage__list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin-block: var(--space-5) var(--space-3);
+  margin-block: var(--space-2) var(--space-3);
 }
 
 .coverage__list li {
